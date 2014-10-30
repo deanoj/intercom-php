@@ -20,7 +20,7 @@ class IntercomBasicAuthClient extends IntercomAbstractClient
      * @param array $config
      * @return Client|IntercomBasicAuthClient
      */
-    public static function factory($config = [])
+    public static function factory($config = array())
     {
         $client = new self();
 
