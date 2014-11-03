@@ -28,6 +28,9 @@ abstract class IntercomAbstractClient extends Client
     protected function configure($config)
     {
         $this->setDefaultOption('headers', $config->get('headers'));
+        if ($config->get('proxy')) {
+            $this->setDefaultOption('proxy', $config->get('proxy'));
+        }
         $this->setDescription($this->getServiceDescriptionFromFile($config->get('service_description')));
         $this->setErrorHandler();
     }
